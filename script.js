@@ -1,18 +1,20 @@
 //Función que me aplica el estilo a la opciòn seleccionada y quita la previamente seleccionada
 function selected(link) {
-    var options = document.querySelectorAll('#links  a');
-    options[0].className = "";
-    options[1].className = "";
-    options[2].className = "";
-    options[3].className = "";
-    options[4].className = "";
-    link.className = "slected";
-
-    //Hacemos desaparecer el menu una vez que se ha seleccionado una opcion
-    //en modo responsive
-    var x = document.getElementById("nav");
-    x.className = "";
+    var options = document.querySelectorAll('#links a');
+    for (var i = 0; i < options.length; i++) {
+        options[i].classList.remove('select');
+    }
+    link.classList.add('select');
+    var x = document.getElementById('nav');
+    x.classList.remove('responsive');
 }
+
+
+//Hacemos desaparecer el menu una vez que se ha seleccionado una opcion
+//en modo responsive
+var x = document.getElementById("nav");
+    x.className = "";
+
 
 //función que muestra el menu responsive
 function responsiveMenu() {
