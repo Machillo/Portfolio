@@ -36,7 +36,7 @@ html {
 
 #home .content header .content-header h1 {
     text-align: center;
-    color: #e6f512;
+    color: #f3ef13;
 }
 
 #home .content header .content-header nav ul {
@@ -54,7 +54,7 @@ html {
 }
 
 #home .content header .content-header nav ul li a:hover {
-    color: #e6f512;
+    color: #f3ef13;
 }
 
 #home .content header .content-header .networks a {
@@ -66,11 +66,11 @@ html {
 }
 
 #home .content header .content-header .networks a:hover {
-    color: #e6f512;
+    color: #f3ef13;
 }
 
 #home .content header .content-header .selected {
-    color: #e6f512;
+    color: #f3ef13;
 }
 
 #home .content .presentation {
@@ -99,7 +99,7 @@ html {
 
 #home .conetnt .presentation h2 span {
     font-size: 25px;
-    color: #e6f512;
+    color: #f3ef13;
 }
 
 #home .content .presentation .description {
@@ -123,7 +123,7 @@ html {
 }
 
 #home .content .presentation a:hover {
-    background-color: #e6f512;
+    background-color: #220ed6;
 }
 
 #icon-nav {
@@ -439,7 +439,7 @@ html {
     position: absolute;
     left: 0px;
     background-color: rgba(0, 0, 0, 0.8);
-    color: #e6f512;
+    color: #f3ef13;
     width: 100%;
     padding: 10px;
     opacity: 0;
