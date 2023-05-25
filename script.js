@@ -37,8 +37,10 @@ function efectSkills() {
         document.getElementById("html").classList.add("bars-progress1");
         document.getElementById("js").classList.add("bars-progress2");
         document.getElementById("bd").classList.add("bars-progress3");
-        document.getElementById("c#").classList.add("bars-progress4");
+        document.getElementById("Java").classList.add("bars-progress4");
         document.getElementById("py").classList.add("bars-progress5");
+        document.getElementById("sb").classList.add("bars-progress6");
+        document.getElementById("dj").classList.add("bars-progress7");
     }
 
 }
