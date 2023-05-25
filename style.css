@@ -314,28 +314,28 @@ html {
 
 .container-skills .skill .bars .bars-progress1 {
     background-color: #fff;
-    width: 95%;
+    width: 70%;
     height: 6px;
     animation: progress1 2s forwards;
 }
 
 .container-skills .skill .bars .bars-progress2 {
     background-color: #fff;
-    width: 90%;
+    width: 70%;
     height: 6px;
     animation: progress2 2s forwards;
 }
 
 .container-skills .skill .bars .bars-progress3 {
     background-color: #fff;
-    width: 90%;
+    width: 85%;
     height: 6px;
     animation: progress3 2s forwards;
 }
 
 .container-skills .skill .bars .bars-progress4 {
     background-color: #fff;
-    width: 85%;
+    width: 90%;
     height: 6px;
     animation: progress4 2s forwards;
 }
@@ -347,12 +347,26 @@ html {
     animation: progress5 2s forwards;
 }
 
+.container-skills .skill .bars .bars-progress6 {
+    background-color: #fff;
+    width: 80%;
+    height: 6px;
+    animation: progress5 2s forwards;
+}
+
+.container-skills .skill .bars .bars-progress7 {
+    background-color: #fff;
+    width: 70%;
+    height: 6px;
+    animation: progress5 2s forwards;
+}
+
 @keyframes progress1 {
     0% {
         width: 0;
     }
     100% {
-        width: 95%;
+        width: 70%;
     }
 }
 
@@ -361,7 +375,7 @@ html {
         width: 0;
     }
     100% {
-        width: 90%;
+        width: 70%;
     }
 }
 
@@ -370,7 +384,7 @@ html {
         width: 0;
     }
     100% {
-        width: 90%;
+        width: 85%;
     }
 }
 
@@ -379,7 +393,7 @@ html {
         width: 0;
     }
     100% {
-        width: 85%;
+        width: 90%;
     }
 }
 
@@ -389,6 +403,24 @@ html {
     }
     100% {
         width: 85%;
+    }
+}
+
+@keyframes progress6 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes progress7 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
     }
 }
 
