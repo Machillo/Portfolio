@@ -1,306 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <section id="home">
-        <div class="content">
-            <header>
-                <div class="content-header">
-                    <h1>/KA/</h1>
-                    <nav id="nav" class="">
-                        <ul id="links">
-                            <li><a href="#home" class="selected" onclick="select(this)">INICIO</a></li>
-                            <li><a href="#aboutme" class="selected" onclick="select(this)">SOBRE MI</a></li>
-                            <li><a href="#service" class="selected" onclick="select(this)">SERVICIOS</a></li>
-                            <li><a href="#portfolio" class="selected" onclick="select(this)">PORTFOLIO</a></li>
-                            <li><a href="#contact" class="selected" onclick="select(this)">CONTACTO</a></li>
-                        </ul>
-                    </nav>
+      <div class="content">
+        <header>
+          <div class="content-header">
+            <h1>/KA/</h1>
+            <nav id="nav" class="">
+              <ul id="links">
+                <li>
+                  <a href="#home" class="selected" onclick="select(this)"
+                    >INICIO</a
+                  >
+                </li>
+                <li>
+                  <a href="#aboutme" class="selected" onclick="select(this)"
+                    >SOBRE MI</a
+                  >
+                </li>
+                <li>
+                  <a href="#service" class="selected" onclick="select(this)"
+                    >HABILIDADES</a
+                  >
+                </li>
+                <li>
+                  <a href="#portfolio" class="selected" onclick="select(this)"
+                    >PROYECTOS</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact" class="selected" onclick="select(this)"
+                    >CONTACTO</a
+                  >
+                </li>
+                <li class="more">
+                  <a href="#" class="selected" onclick="toggleSubMenu(event)"
+                    >MÁS</a
+                  >
+                  <ul class="submenu">
+                    <li><a href="#experience">EXPERIENCIA LABORAL</a></li>
+                    <li><a href="#education">FORMACION</a></li>
+                    <li><a href="#otherprojects">OTROS PROYECTOS</a></li>
+                    <li><a href="#softskills">HABILIDADES BLANDAS</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
 
-                    <div id="icon-nav" onclick="responsiveMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-
-                    <div class="networks">
-                        <a href="https://www.linkedin.com/in/kenneth-alvarado-ses/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/Machillo"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-            </header>
-            <div class="presentation">
-                <p class="welcome">Bienvenidos</p>
-                <h2>Soy <span>Kenneth Alvarado</span>, Estudiante en programación Back-end</h2>
-                <p class="description"> Programador Full Stack / Back-end</p>
-                <a href="#portfolio">Ir a Portafolio</a>
+            <div id="icon-nav" onclick="responsiveMenu()">
+              <i class="fa-solid fa-bars"></i>
             </div>
+
+            <div class="networks">
+              <a href="https://www.linkedin.com/in/kenneth-alvarado-ses/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/Machillo"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </header>
+        <div class="presentation">
+          <p class="welcome">Bienvenidos</p>
+          <h2>
+            Soy <span>Kenneth Alvarado</span>, Estudiante en programación
+            Front-End
+          </h2>
+          <p class="description">Programador Front-End</p>
+          <a href="#portfolio">Ir a Portafolio</a>
         </div>
+      </div>
     </section>
 
     <section id="aboutme">
-        <div class="container-photo">
-            <img src="img/photo.jpg" alt="">
-        </div>
-        <div class="aboutme">
-            <p class="section-title">Sobre Mi</p>
-            <h2>Hola, Soy <span>Kenneth Alvarado</span> </h2>
-            <h3>Estudiante en programación</h3>
-            <p>Hola a todos Mi nombre es Kenneth Alvarado, y actualmente trabajo en Abbott Medical. En 2020 comencé mis estudios en programación y desde entonces he ido ascendiendo. Con el tiempo me he dado cuenta de que mi personalidad encajaría muy bien en un puesto de back-end o fullstack. Estoy apasionado por la programación backend, enfocado en aprender y desarrollar habilidades en el desarrollo de software. Manejo buen conocimiento en lenguajes como Python y Java, así como en el diseño de bases de datos y API REST. Comprometido con la excelencia y la entrega de soluciones eficientes y de calidad.. He leído libros como Clean Code, Soft Skills: The Software Developer's Handbook for Life. También he aprendido habilidades como Cisco CCNA. Decidí unirme a Oracle One no sólo porque me encanta la programación y la tecnología, sino por el impacto que tendría no sólo para mí, sino para mi familia. Me encanta ayudar a la gente y si puedo hacerlo de alguna manera, me siento realizado. Eso es algo que sé que puedo hacer como programador.</p>
-            <a href="PDF/CV-Kenneth-Alvarado.pdf">Descargar CV</a>
-        </div>
+      <div class="container-photo">
+        <img src="img/kenneth.jpg" alt="" />
+      </div>
+      <div class="aboutme">
+        <p class="section-title">Sobre Mi</p>
+        <h2>Hola, Soy <span>Kenneth Alvarado</span></h2>
+        <h3>Estudiante en programación</h3>
+        <p>
+          Hola a todos Mi nombre es Kenneth Alvarado, y actualmente trabajo en
+          Abbott Medical. En 2020 comencé mis estudios en programación y desde
+          entonces he ido ascendiendo. Con el tiempo me he dado cuenta de que mi
+          personalidad encajaría muy bien en un puesto de Front-End o fullstack.
+          Estoy apasionado por la programación, enfocado en aprender y
+          desarrollar habilidades en el desarrollo de software. Manejo buen
+          conocimiento en lenguajes como HTML, CSSS, JavaScript, Java, así como
+          en el diseño de bases de datos y API REST. Comprometido con la
+          excelencia y la entrega de soluciones eficientes y de calidad.. He
+          leído libros como Clean Code, Soft Skills: The Software Developer's
+          Handbook for Life. También he aprendido habilidades como Cisco CCNA.
+          Decidí aprender programación no sólo porque me encanta buscar
+          soluciones y la tecnología, sino por el impacto que tendría no sólo
+          para mí, sino para mi familia. Me encanta ayudar a la gente y si puedo
+          hacerlo de alguna manera, me siento realizado. Eso es algo que sé que
+          puedo hacer como programador.
+        </p>
+        <a href="PDF/CV-Kenneth-Alvarado.pdf">Descargar CV</a>
+      </div>
     </section>
 
     <section id="service">
-        <h3 class="section-title">MIS SERVICIOS</h3>
-        <div class="row">
-            <div class="service">
-                <span class="icon"> <i class="fa-solid fa-code"></i></span>
-                <h4>Desarrollo Backend</h4>
-                <hr>
-                <ul class="service-tag">
-                    <li>Java | Spring Boot</li>
-                    <li>Python | Django</li>
-                </ul>
-                <p>Ofrezco servicios en el desarrollo backend</p>
-            </div>
-            <div class="service">
-                <span class="icon"><i class="fa-solid fa-database"></i></span>
-                <h4>Integración de base de datos</h4>
-                <hr>
-                <ul class="service-tag">
-                    <li>MySQL</li>
-                    
-                </ul>
-                <p> Experiencia en el diseño y la integración de bases de datos. Desarrollo de consultas y optimización del rendimiento para garantizar un almacenamiento eficiente de datos.</p>
-            </div>
-            <div class="service">
-                <span class="icon"> <i class="fa-solid fa-code"></i></span>
-                <h4>API</h4>
-                <hr>
-                <ul class="service-tag">
-                    <li>API RESTful</li>
-                </ul>
-                <p>Creación de servicios web API RESTful utilizando tecnologías como Spring Boot y Python Django para proporcionar una comunicación eficiente y segura entre aplicaciones.</p>
-            </div>
+      <h3 class="section-title">MIS SERVICIOS</h3>
+      <div class="row">
+        <div class="service">
+          <span class="icon"> <i class="fa-solid fa-code"></i></span>
+          <h4>Desarrollo Backend</h4>
+          <hr />
+          <ul class="service-tag">
+            <li>Java | Spring Boot</li>
+            <li>Python | Django</li>
+          </ul>
+          <p>Ofrezco servicios en el desarrollo backend</p>
         </div>
-        <div class="row">
-            <div class="service">
-                <span class="icon"><i class="fa-solid fa-database"></i></span>
-                <h4>Integración de servicios web</h4>
-                <hr>
-                <ul class="service-tag">
-                    <li>SOAP</li>
-                    <li>REST</li>
-                </ul>
-                <p>Conexión y integración de servicios web externos</p>
-            </div>
-            <div class="service">
-                <span class="icon"><i class="fa-solid fa-palette"></i></span>
-                <h4>Frontend básico</h4>
-                <hr>
-                <ul class="service-tag">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-                <p>Habilidades para desarrollar interfaces de usuario básicas y funcionales que se integren con el backend.</p>
-            </div>
+        <div class="service">
+          <span class="icon"><i class="fa-solid fa-database"></i></span>
+          <h4>Integración de base de datos</h4>
+          <hr />
+          <ul class="service-tag">
+            <li>MySQL</li>
+          </ul>
+          <p>
+            Experiencia en el diseño y la integración de bases de datos.
+            Desarrollo de consultas y optimización del rendimiento para
+            garantizar un almacenamiento eficiente de datos.
+          </p>
         </div>
+        <div class="service">
+          <span class="icon"> <i class="fa-solid fa-code"></i></span>
+          <h4>API</h4>
+          <hr />
+          <ul class="service-tag">
+            <li>API RESTful</li>
+          </ul>
+          <p>
+            Creación de servicios web API RESTful utilizando tecnologías como
+            Spring Boot y Python Django para proporcionar una comunicación
+            eficiente y segura entre aplicaciones.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="service">
+          <span class="icon"><i class="fa-solid fa-database"></i></span>
+          <h4>Integración de servicios web</h4>
+          <hr />
+          <ul class="service-tag">
+            <li>SOAP</li>
+            <li>REST</li>
+          </ul>
+          <p>Conexión y integración de servicios web externos</p>
+        </div>
+        <div class="service">
+          <span class="icon"><i class="fa-solid fa-palette"></i></span>
+          <h4>Frontend básico</h4>
+          <hr />
+          <ul class="service-tag">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <p>
+            Habilidades para desarrollar interfaces de usuario básicas y
+            funcionales que se integren con el backend.
+          </p>
+        </div>
+      </div>
     </section>
 
     <div class="container-skills" id="skills">
-        <h3>HABILIDADES </h3>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="list"> </span>Html & Css</p>
-                <span class="percentage">70%</span>
-            </div>
-
-            <div class="bars">
-                <div class="" id="html"></div>
-            </div>
+      <h3>HABILIDADES</h3>
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"> </span>Html & Css</p>
+          <span class="percentage">70%</span>
         </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="list"> </span>Javascript</p>
-                <span class="percentage">70%</span>
-            </div>
 
-            <div class="bars">
-                <div class="" id="js"></div>
-            </div>
+        <div class="bars">
+          <div class="" id="html"></div>
         </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="list"> </span>Bases de Datos</p>
-                <span class="percentage">85%</span>
-            </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"> </span>Javascript</p>
+          <span class="percentage">70%</span>
+        </div>
 
-            <div class="bars">
-                <div class="" id="bd"></div>
-            </div>
+        <div class="bars">
+          <div class="" id="js"></div>
         </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="list"> </span>Java</p>
-                <span class="percentage">90%</span>
-            </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"> </span>Bases de Datos</p>
+          <span class="percentage">85%</span>
+        </div>
 
-            <div class="bars">
-                <div class="" id="Java"></div>
-            </div>
+        <div class="bars">
+          <div class="" id="bd"></div>
         </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="list"> </span>Python</p>
-                <span class="percentage">85%</span>
-            </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"> </span>Java</p>
+          <span class="percentage">90%</span>
+        </div>
 
-            <div class="bars">
-                <div class="" id="py"></div>
-            </div>
+        <div class="bars">
+          <div class="" id="Java"></div>
         </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="list"> </span>Spring Boot</p>
-                <span class="percentage">80%</span>
-            </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"> </span>Python</p>
+          <span class="percentage">85%</span>
+        </div>
 
-            <div class="bars">
-                <div class="" id="sb"></div>
-            </div>
+        <div class="bars">
+          <div class="" id="py"></div>
         </div>
-        <div class="skill">
-            <div class="info">
-                <p> <span class="list"> </span>Django</p>
-                <span class="percentage">70%</span>
-            </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"> </span>Spring Boot</p>
+          <span class="percentage">80%</span>
+        </div>
 
-            <div class="bars">
-                <div class="" id="dj"></div>
-            </div>
+        <div class="bars">
+          <div class="" id="sb"></div>
         </div>
+      </div>
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"> </span>Django</p>
+          <span class="percentage">70%</span>
+        </div>
+
+        <div class="bars">
+          <div class="" id="dj"></div>
+        </div>
+      </div>
     </div>
 
     <section id="portfolio">
-        <h3 class="section-title">Mis Proyectos</h3>
-        <div class="row">
-            <div class="project">
-                <div class="overlay"></div>
-                <a href="https://machillo.github.io/Text-Encriptor/">
-                <img src="img/project1.jpeg" alt="Pantalla inicial de encriptador de texto">
-                </a>
-                <div class="info">
-                    <h4>Encriptador de Texto</h4>
-                    <p>Sistema de encriptación y desencriptación de texto, que permite al usuario ingresar un mensaje y transformarlo utilizando un algoritmo de sustitución de caracteres.</p>
-                </div>
-            </div>
-            <div class="project">
-                <div class="overlay"></div>
-                <img src="img/project2.jpeg" alt="">
-                <div class="info">
-                    <h4>Juego de Ahorcado</h4>
-                    <p>La implementación en este proyecto utiliza HTML, CSS y JavaScript para crear la interfaz de usuario y la lógica del juego. El jugador interactúa con el juego a través de una página web que muestra el estado actual del ahorcado y permite ingresar letras para realizar las adivinanzas.</p>
-                </div>
-            </div>
-            <div class="project">
-                <div class="overlay"></div>
-                <img src="img/proyecto3.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
+      <h3 class="section-title">Mis Proyectos</h3>
+      <div class="row">
+        <div class="project">
+          <div class="overlay"></div>
+          <a href="https://machillo.github.io/Text-Encriptor/">
+            <img
+              src="img/project1.jpeg"
+              alt="Pantalla inicial de encriptador de texto"
+            />
+          </a>
+          <div class="info">
+            <h4>Encriptador de Texto</h4>
+            <p>
+              Sistema de encriptación y desencriptación de texto, que permite al
+              usuario ingresar un mensaje y transformarlo utilizando un
+              algoritmo de sustitución de caracteres.
+            </p>
+          </div>
         </div>
-        <div class="row">
-            <div class="project">
-                <div class="overlay"></div>
-                <img src="img/proyecto4.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="project">
-                <div class="overlay"></div>
-                <img src="img/proyecto5.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="project">
-                <div class="overlay"></div>
-                <img src="img/proyecto6.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="img/project2.jpeg" alt="" />
+          <div class="info">
+            <h4>Juego de Ahorcado</h4>
+            <p>
+              La implementación en este proyecto utiliza HTML, CSS y JavaScript
+              para crear la interfaz de usuario y la lógica del juego. El
+              jugador interactúa con el juego a través de una página web que
+              muestra el estado actual del ahorcado y permite ingresar letras
+              para realizar las adivinanzas.
+            </p>
+          </div>
         </div>
-        <div class="row">
-            <div class="project">
-                <div class="overlay"></div>
-                <img src="img/proyecto7.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="project">
-                <div class="overlay"></div>
-                <img src="img/proyecto8.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="project">
-                <div class="overlay"></div>
-                <img src="img/proyecto9.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="img/project3.png" alt="" />
+          <div class="info">
+            <h4>Pagina de la iglesia</h4>
+            <p>
+              Participe en el proyecto de mi iglesia, realizando algunas
+              secciones de la misma, trabajando con tecnologias como, HTML, CSS,
+              JavaScript, AWS, Git.
+            </p>
+          </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="img/proyecto4.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="img/proyecto5.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="img/proyecto6.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="img/proyecto7.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="img/proyecto8.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="overlay"></div>
+          <img src="img/proyecto9.jpg" alt="" />
+          <div class="info">
+            <h4>Descripcion Proyecto</h4>
+            <p>Diseño Web</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+      <h3 class="section-title">Experiencia Laboral</h3>
+      <div class="experience-container">
+        <div class="job">
+          <img src="img/abbott-logo.png" alt="abbott-logo" class="job-logo" />
+          <div class="job-info">
+            <h4>Abbott Medical</h4>
+            <span>2022 - Actualmente</span>
+            <p>Descripcion</p>
+          </div>
+        </div>
+      </div>
+      <div class="experience-container">
+        <div class="job">
+          <img
+            src="img/mcdonanld-logo.png"
+            alt="mcdonanld-logo"
+            class="job-logo"
+          />
+          <div class="job-info">
+            <h4>McDonald</h4>
+            <span>2022 - Actualmente</span>
+            <p>Descripcion</p>
+          </div>
+        </div>
+      </div>
+      <div class="experience-container">
+        <div class="job">
+          <img src="img/amazon-logo.png" alt="amazon-logo" class="job-logo" />
+          <div class="job-info">
+            <h4>Amazon</h4>
+            <span>2022 - Actualmente</span>
+            <p>Descripcion</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="education-section">
+      <h2>Formación Reglada</h2>
+      <div class="education-container">
+        <div class="education-item">
+          <h3>Curso de Desarrollo Web</h3>
+          <p class="year">2023</p>
+          <a
+            href="https://link-al-certificado.com"
+            target="_blank"
+            class="certificate-link"
+            >Ver Certificado</a
+          >
+        </div>
+        <div class="education-item">
+          <h3>Certificación en UX/UI Design</h3>
+          <p class="year">2022</p>
+          <a
+            href="https://link-al-certificado.com"
+            target="_blank"
+            class="certificate-link"
+            >Ver Certificado</a
+          >
+        </div>
+        <!-- Puedes añadir más items aquí -->
+      </div>
+    </section>
+
+    <section id="otherprojects" class="projects-section">
+      <h2>Otros Proyectos</h2>
+      <div class="carousel-container">
+        <button class="carousel-control prev" onclick="moveCarousel(-1)">
+          &#10094;
+        </button>
+        <div class="carousel-track">
+          <div class="project-item">
+            <h3>Proyecto 1</h3>
+            <p class="year">2024</p>
+            <a
+              href="https://link-al-proyecto1.com"
+              target="_blank"
+              class="project-link"
+              >Ver Proyecto</a
+            >
+          </div>
+          <div class="project-item">
+            <h3>Proyecto 2</h3>
+            <p class="year">2023</p>
+            <a
+              href="https://link-al-proyecto2.com"
+              target="_blank"
+              class="project-link"
+              >Ver Proyecto</a
+            >
+          </div>
+          <div class="project-item">
+            <h3>Proyecto 3</h3>
+            <p class="year">2022</p>
+            <a
+              href="https://link-al-proyecto3.com"
+              target="_blank"
+              class="project-link"
+              >Ver Proyecto</a
+            >
+          </div>
+          <!-- Puedes añadir más items aquí -->
+        </div>
+        <button class="carousel-control next" onclick="moveCarousel(1)">
+          &#10095;
+        </button>
+      </div>
+    </section>
+
+    <section id="softskills" class="softskills-section">
+      <h3 class="section-title">Habilidades Blandas</h3>
+      <div class="softskills-container">
+        <div class="skill-card">
+          <i class="fa-solid fa-users"></i>
+          <h4>Trabajo en Equipo</h4>
+          <p>
+            Capacidad para colaborar de manera efectiva en equipos
+            multidisciplinarios, manteniendo la comunicación abierta y
+            asegurando la cohesión para cumplir con los objetivos.
+          </p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-comments"></i>
+          <h4>Comunicación</h4>
+          <p>
+            Habilidades para expresar ideas claras y escuchar activamente,
+            facilitando el intercambio de información entre los miembros del
+            equipo y otros stakeholders.
+          </p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h4>Resolución de Problemas</h4>
+          <p>
+            Enfoque en soluciones creativas para resolver desafíos técnicos y de
+            negocio, optimizando procesos y mejorando la eficiencia.
+          </p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-calendar-check"></i>
+          <h4>Gestión del Tiempo</h4>
+          <p>
+            Capacidad de priorizar tareas y gestionar el tiempo de manera
+            efectiva, cumpliendo con plazos y manteniendo una alta calidad en el
+            trabajo.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-        <h3 class="section-title">Contactar ahora</h3>
-        <div class="container-form">
-            <form action="">
-                <div class="half-row">
-                    <input type="text" placeholder="Nombre Completo *" class="input-half">
-                    <input type="email" placeholder="Dirección de Email" class="input-half">
-                </div>
-                <div class="row">
-                    <input type="text" placeholder="Tema..." class="input-full">
-                </div>
-                <div class="row">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
-                </div>
+      <h3 class="section-title">Contactar ahora</h3>
+      <div class="container-form">
+        <form action="">
+          <div class="half-row">
+            <input
+              type="text"
+              placeholder="Nombre Completo *"
+              class="input-half"
+            />
+            <input
+              type="email"
+              placeholder="Dirección de Email"
+              class="input-half"
+            />
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Tema..." class="input-full" />
+          </div>
+          <div class="row">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Tu Mensaje..."
+              class="input-full"
+            ></textarea>
+          </div>
 
-                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
-            </form>
-        </div>
+          <input type="submit" value="Enviar Mensaje" class="btn-enviar" />
+        </form>
+      </div>
     </section>
 
     <footer>
-        <p>Todos los derechos reservados - 2023</p>
-        <div class="networks">
-            <a href="https://www.linkedin.com/in/kenneth-alvarado-ses/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/Machillo"><i class="fa-brands fa-github"></i></a>
-        </div>
-
+      <p>Todos los derechos reservados - 2023</p>
+      <div class="networks">
+        <a href="https://www.linkedin.com/in/kenneth-alvarado-ses/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Machillo"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

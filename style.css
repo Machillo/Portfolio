@@ -11,7 +11,7 @@ html {
 }
 
 #home {
-    background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("img/HomeWallpaper.jpg");
+    background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("img/cover-home.jpg");
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -43,19 +43,49 @@ html {
     list-style: none;
     display: flex;
     align-items: center;
-}
-
-#home .content header .content-header nav ul li a {
+  }
+  
+  #home .content header .content-header nav ul li a {
     text-decoration: none;
     color: #fff;
     margin: 0 12px;
     font-weight: 400;
     transition: .5s;
-}
-
-#home .content header .content-header nav ul li a:hover {
+  }
+  
+  #home .content header .content-header nav ul li a:hover {
     color: #f3ef13;
-}
+  }
+  
+  #home .content header .content-header nav ul li.more {
+    position: relative;
+  }
+  
+  #home .content header .content-header nav ul li.more .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  #home .content header .content-header nav ul li.more .submenu li {
+    padding: 5px 20px;
+  }
+  
+  #home .content header .content-header nav ul li.more .submenu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: .5s;
+  }
+  
+  #home .content header .content-header nav ul li.more .submenu li a:hover {
+    color: #f3ef13;
+  }
+  
 
 #home .content header .content-header .networks a {
     text-decoration: none;
@@ -137,22 +167,38 @@ html {
     padding: 100px 15px;
     color: #111135;
     display: flex;
+    align-items: center; 
+    gap: 40px; 
 }
 
 #aboutme .container-photo {
-    max-width: 400px;
-    margin-right: 80px;
+    width: 200px; 
+    height: 200px; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#aboutme .container-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 
 #aboutme .container-photo img {
-    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius: 20px;
-    background-color: #f3f3f3;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%; 
 }
 
+
 #aboutme .aboutme {
-    margin: 0 40px;
+    flex: 1; 
 }
 
 #aboutme .aboutme .section-title {
@@ -162,6 +208,7 @@ html {
     text-decoration: underline;
     text-decoration-color: #d3d3d3;
     text-decoration-thickness: 5px;
+    margin-bottom: 20px;
 }
 
 #aboutme .aboutme h2 {
@@ -172,7 +219,7 @@ html {
 }
 
 #aboutme .aboutme h2 span {
-    color: #220ed6;
+    color: #220ed6; 
 }
 
 #aboutme .aboutme h3 {
@@ -181,6 +228,7 @@ html {
     text-transform: uppercase;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    color: #333; 
 }
 
 #aboutme .aboutme p {
@@ -198,7 +246,7 @@ html {
     border: 1px solid #000;
     padding: 10px 20px;
     margin-top: 30px;
-    transition: .5s;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 #aboutme .aboutme a:hover {
@@ -206,10 +254,12 @@ html {
     color: #fff;
 }
 
+
 #service {
     padding: 100px 15px;
     text-align: center;
     background-color: #f3f3f3;
+    background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("img/cover-service.jpg");
 }
 
 #service .section-title {
@@ -547,6 +597,275 @@ html {
     color: #fff;
 }
 
+#experience {
+    padding: 100px 15px;
+    max-width: 100%;
+    margin: auto;
+    background-color: #1c1c1c;
+}
+
+#experience .section-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #f3ef13;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 40px;
+}
+
+.job {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.job-info {
+    flex: 1;
+}
+  
+.job-info h4 {
+    font-size: 20px;
+    color: #111135;
+    margin-bottom: 5px;
+}
+  
+.job-info span {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+    display: block;
+}
+  
+.job-info p {
+    font-size: 16px;
+    color: #111135;
+}
+
+.education-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+    color: #111;
+    text-align: center;
+}
+  
+.education-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+  
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.education-item {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+  
+.education-item:hover {
+    transform: scale(1.05);
+}
+  
+.education-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #111;
+}
+  
+.education-item .year {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+  
+.education-item .certificate-link {
+    color: #f3ef13;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+  
+.education-item .certificate-link:hover {
+    color: #111;
+}
+  
+.projects-section {
+    padding: 50px 0;
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: center;
+}
+  
+.projects-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #f3ef13;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+  
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.project-item {
+    min-width: 100%;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+  
+.project-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+  
+.project-item .year {
+    font-size: 1em;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+  
+.project-item .project-link {
+    color: #f3ef13;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+  
+.project-item .project-link:hover {
+    color: #fff;
+}
+  
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+  
+.carousel-control.prev {
+    left: 10px;
+}
+  
+.carousel-control.next {
+    right: 10px;
+}
+
+.softskills-section {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 50px 0;
+  }
+  
+  .softskills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+#softskills {
+    background-color: #fff;
+    padding: 100px 15px;
+}
+
+#softskills .section-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #f3ef13;
+    text-decoration: underline;
+    text-decoration-color: #d3d3d3;
+    text-decoration-thickness: 5px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.softskills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #111;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card i {
+    font-size: 2rem;
+    color: #4caf50;
+}
+
+.skill-card h4 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+  
 
 footer {
     background-color: #000;

@@ -1,35 +1,22 @@
-//Función que me aplica el estilo a la opciòn seleccionada y quita la previamente seleccionada
+// Función que aplica el estilo a la opción seleccionada y quita la previamente seleccionada
 function selected(link) {
     var options = document.querySelectorAll('#links a');
-    for (var i = 0; i < options.length; i++) {
-        options[i].classList.remove('select');
-    }
+    options.forEach(option => option.classList.remove('select'));
     link.classList.add('select');
     var x = document.getElementById('nav');
     x.classList.remove('responsive');
 }
 
-
-//Hacemos desaparecer el menu una vez que se ha seleccionado una opcion
-//en modo responsive
-var x = document.getElementById("nav");
-    x.className = "";
-
-
-//función que muestra el menu responsive
+// Función que muestra el menú responsive
 function responsiveMenu() {
     var x = document.getElementById("nav");
-    if (x.className === "") {
-        x.className = "responsive";
-    } else {
-        x.className = "";
-    }
+    x.classList.toggle("responsive");
 }
 
-//detecto el scrolling para aplicar la animación del la barra de habilidades
+// Detecto el scrolling para aplicar la animación de la barra de habilidades
 window.onscroll = function() { efectSkills() };
 
-//funcion que aplica la animación de la barra de habilidades
+// Función que aplica la animación de la barra de habilidades
 function efectSkills() {
     var skills = document.getElementById("skills");
     var distance_skills = window.innerHeight - skills.getBoundingClientRect().top;
@@ -41,6 +28,33 @@ function efectSkills() {
         document.getElementById("py").classList.add("bars-progress5");
         document.getElementById("sb").classList.add("bars-progress6");
         document.getElementById("dj").classList.add("bars-progress7");
+        // Desactivar el evento onscroll si la animación solo debe ejecutarse una vez
+        // window.onscroll = null;
     }
+}
 
+// Función para mostrar/ocultar el submenú
+function toggleSubMenu(event) {
+    event.preventDefault();
+    const submenu = event.currentTarget.nextElementSibling;
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+}
+
+let currentSlide = 0;
+
+function moveCarousel(direction) {
+  const track = document.querySelector('.carousel-track');
+  const items = document.querySelectorAll('.project-item');
+  const totalSlides = items.length;
+
+  currentSlide += direction;
+
+  if (currentSlide < 0) {
+    currentSlide = totalSlides - 1;
+  } else if (currentSlide >= totalSlides) {
+    currentSlide = 0;
+  }
+
+  const slideWidth = items[0].clientWidth;
+  track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
 }
